@@ -1,7 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Card from '../components/Card'
+import Page from '../components/Page'
+import View from '../components/View'
+import { getInvoices } from '../data/dummyData'
 
 const HomePage = (): JSX.Element => {
-  return <div>HomePage</div>
+  const invoices = getInvoices()
+  return (
+    <Page>
+      <View margin="20px 5px">Home Page</View>
+      {invoices.map((invoice) => (
+        <Link to={`/${invoice.id}`} style={{ textDecoration: 'none' }}>
+          <Card key={invoice.id}>
+            <View>
+              <View padding="5px 0px">{invoice.name}</View>
+              <View padding="5px 0px">{invoice.due}</View>
+            </View>
+          </Card>
+        </Link>
+      ))}
+    </Page>
+  )
 }
 
 export default HomePage
