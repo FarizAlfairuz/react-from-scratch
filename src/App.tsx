@@ -1,9 +1,10 @@
 import React from 'react'
+import { useRoutes } from 'react-router-dom'
+import getRoutes from './routes'
 
-const App = () => {
-  return (
-    <div>Hello world</div>
-  )
+function App(): JSX.Element {
+  const routes = useRoutes(getRoutes())
+  return <div>{routes}</div>
 }
 
 export default App
