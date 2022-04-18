@@ -47,3 +47,7 @@ const invoices = [
 export const getInvoices = (): DataObject[] => {
   return invoices
 }
+
+export const getSingleInvoice = (id): DataObject => {
+  return invoices.find((invoice) => invoice.id === id)
+}
