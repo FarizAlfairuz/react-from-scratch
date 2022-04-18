@@ -1,9 +1,7 @@
 import React from 'react'
 
-const DetailPage = () => {
-  return (
-    <div>DetailPage</div>
-  )
+const DetailPage = (): JSX.Element => {
+  return <div>DetailPage</div>
 }
 
 export default DetailPage
