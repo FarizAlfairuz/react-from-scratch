@@ -1,5 +1,6 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import Button from '../components/Button'
 import Card from '../components/Card'
 import Page from '../components/Page'
 import View from '../components/View'
@@ -11,6 +12,11 @@ const DetailPage = (): JSX.Element => {
 
   return (
     <Page>
+      <View>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <Button type="button">Back</Button>
+        </Link>
+      </View>
       <View margin="20px 5px">Detail Page</View>
       <Card>Name: {invoice.name}</Card>
       <Card>Amount: {invoice.amount}</Card>
