@@ -11,8 +11,12 @@ const HomePage = (): JSX.Element => {
     <Page>
       <View margin="20px 5px">Home Page</View>
       {invoices.map((invoice) => (
-        <Link to={`/${invoice.id}`} style={{ textDecoration: 'none' }}>
-          <Card key={invoice.id}>
+        <Link
+          key={invoice.id}
+          to={`/${invoice.id}`}
+          style={{ textDecoration: 'none' }}
+        >
+          <Card>
             <View>
               <View padding="5px 0px">{invoice.name}</View>
               <View padding="5px 0px">{invoice.due}</View>
