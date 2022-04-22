@@ -7,7 +7,7 @@
     "test": "test",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --config=config/webpack/webpack.client.ts",
-    "dev": "node src/server/server.ts"
+    "dev": "nodemon src/server/server.ts"
   },
   "author": "Fariz Alfairuz",
   "license": "ISC",
@@ -23,6 +23,8 @@
     "express": "^4.17.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-hot-loader": "^4.13.0",
+    "react-is": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5",
     "typescript": "^4.6.3",
