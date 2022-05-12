@@ -41,6 +41,11 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ],
   },
   plugins: [
@@ -54,5 +59,7 @@ module.exports = {
     hot: true,
     port: 8080,
     historyApiFallback: true,
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
   },
 }

@@ -24,6 +24,10 @@ const staticMiddleware = express.static('dist')
 
 server.use(staticMiddleware)
 
+server.get('*', (request, response) => {
+  response.sendFile(path.resolve('public', 'index.html'))
+})
+
 server.listen(8080, () => {
-  console.log('Server is listening')
+  console.log('Server is listening to port: ', 8080)
 })

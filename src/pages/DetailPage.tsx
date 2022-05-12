@@ -8,7 +8,8 @@ import { getSingleInvoice } from '../data/dummyData'
 
 const DetailPage = (): JSX.Element => {
   const params = useParams()
-  const invoice = getSingleInvoice(parseInt(params.id, 10))
+
+  const invoice = getSingleInvoice(params.id as string)
 
   return (
     <Page>
